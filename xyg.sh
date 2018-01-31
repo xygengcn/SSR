@@ -20,7 +20,7 @@ clear
 function Main ()
 {
 clear
-wget http://xygeng-1252247588.cossh.myqcloud.com/xyg.sh && chmod 0111 xyg.sh && ./xyg.sh
+wget https://raw.githubusercontent.com/xygengcn/SSR/master/xyg.sh && chmod 0111 xyg.sh && ./xyg.sh
 rm -rf xyg.sh
 exit 0
 return 0
