@@ -1,0 +1,41 @@
+#!/bin/bash
+cd /root
+rm -rf SSR
+echo =======================
+echo "===  正在启动请稍等 ==="
+echo -e "===   \033[31m Loading... \033[0m  ==="
+echo =======================
+clear
+sleep 1
+echo -e "\t ============================================================="
+echo
+echo -e "\t欢迎进入庚哥哥博客（blog.xygeng.cn)"
+echo
+echo -e "\t ============================================================="
+echo
+echo -e "\t \033[32m 1.单端口SSR一键搭建 \033[0m"
+echo
+echo -e "\t \033[33m 2.多端口SSR一键搭建 \033[0m"
+echo
+echo -e "\t \033[34m 3.高级调试安装模式\033[0m \033[31m [不推荐] \033[0m"
+echo
+echo -e "\t \033[31m x.卸载SSR \033[0m"
+echo
+echo
+echo -e  "\033[34m 请选择 [ 1 , 2 , 3 或 x ] 进行下一步安装！\033[0m
+
+ >请选择安装类型: "
+read az
+  case $az in
+    1) wget -q https://raw.githubusercontent.com/xygengcn/SSR/master/code/SSR-one.sh && bash SSR-one.sh
+       ;;
+    2) wget -q https://raw.githubusercontent.com/xygengcn/SSR/master/code/DSSR.sh && bash DSSR.sh
+       ;;
+    3) wget -q https://raw.githubusercontent.com/xygengcn/SSR/master/code/GJ.sh && bash GJ.sh
+       ;;
+    x) wget -q https://raw.githubusercontent.com/xygengcn/SSR/master/code/SSR-one.sh && bash SSR-one uninstall
+       ;;
+    *)  echo -e "\033[31m 错误：只能选择[ 1 , 2 , 3 或 x ]！！\033[0m"
+       ;;
+  esac
+rm -rf SSR
